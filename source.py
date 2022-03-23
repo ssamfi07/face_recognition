@@ -109,7 +109,7 @@ while True:
         roi_gray = gray[y:y+h, x:x+h]  # rectangle frame of the face gray
         roi_color = frame[y:y+h, x:x+h]  # rectangle frame of the face color
 
-        cv.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 3)
+        cv.rectangle(frame, (x, y), (x + w, y + h), (0, 0, 255), 3)
 
         eyes = eyes_cascade.detectMultiScale(roi_gray, scaleFactor=1.5, minNeighbors = 5)  # extract eyes from region of interest
         #iterate eyes
